@@ -32,7 +32,7 @@
 static const std::map<int, int> LLAMA_N_PARTS = {
     { 4096, 1 },
     { 5120, 1 },
-    { 6656, 4 },
+    { 6656, 1 },
     { 8192, 8 },
 };
 
@@ -40,10 +40,10 @@ static const std::map<int, int> LLAMA_N_PARTS = {
 struct llama_hparams {
     int32_t n_vocab = 32000;
     int32_t n_ctx   = 512;   // this is provided as user input?
-    int32_t n_embd  = 4096;
+    int32_t n_embd  = 5120;
     int32_t n_mult  = 256;
-    int32_t n_head  = 32;
-    int32_t n_layer = 32;
+    int32_t n_head  = 40;
+    int32_t n_layer = 40;
     int32_t n_rot   = 64;
     int32_t f16     = 1;
 };
